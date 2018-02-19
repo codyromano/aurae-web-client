@@ -1,0 +1,17 @@
+.tool-tip-wrapper {
+  position: relative;
+}
+.tool-tip-wrapper:hover .tool-tip-content {
+  display: block;
+}
+.tool-tip-content {
+  display: none;
+  background: #fff;
+  color: #000;
+  padding: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: solid #111 0.25rem;
+}

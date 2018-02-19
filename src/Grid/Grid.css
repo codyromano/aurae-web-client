@@ -1,0 +1,18 @@
+.grid-row {
+  display: block;
+  margin-bottom: var(--grid-row-padding-bottom-2x);
+}
+
+.grid-column-group {
+  display: flex;
+}
+
+.grid-center {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-column {
+  display: inline-flex;
+  margin-right: 1.5rem;
+}

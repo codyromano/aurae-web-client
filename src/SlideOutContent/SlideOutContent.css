@@ -1,0 +1,35 @@
+html {
+  --slide-out-delay: 1s;
+  --slide-out-height: 300px;
+}
+
+.slide-out-content {
+  pointer-events: none;
+
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  animation-name: slide-out-content;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  /* TODO: These should be configurable in the component */
+  animation-duration: 3s;
+  animation-delay: var(--slide-out-delay);
+  -webkit-animation-delay: var(--slide-out-delay);
+}
+
+@keyframes slide-out-content {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    /*
+    bottom: calc(var(--slide-out-height) * -1);
+    */
+    bottom: -120%;
+  }
+}

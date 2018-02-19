@@ -1,0 +1,52 @@
+.button {
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: 500;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  border-bottom: solid 0.25rem #D2D7D3;
+  /* background: #87D37C; */
+  background: #ECF0F1;
+  color: var(--color-rich-blue);
+  padding: 0.5em;
+  margin-left: -0.5rem;
+  transition: border-bottom-color ease 0.25s;
+}
+
+.button, .button a {
+  color: var(--color-rich-blue);
+  text-decoration: none;
+}
+
+.button:hover {
+  border-bottom-color: #BDC3C7;
+}
+
+.button-large {
+  font-size: 1.25rem;
+}
+
+.button-fade-in {
+  opacity: 0;
+  animation-name: button-fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-selected, .button-selected:hover {
+  background-color: #eee;
+  border-bottom-color: #000;
+  color: #000;
+}

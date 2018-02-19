@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+.heading {
+  font-family: Quicksand;
+}
+.heading-extra-large {
+  font-size: var(--font-size-extra-large);
+}
+.heading-normal {
+  font-size: var(--font-size-normal);
+}
+.heading-large {
+  font-size: var(--font-size-large);
+}

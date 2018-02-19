@@ -1,0 +1,56 @@
+html {
+  --shake-effect-rotation: 3deg;
+  --shake-base-scale: 1.00;
+  --shake-grow-scale: 1.00;
+  --shake-base-transform: rotate(0deg) scale(1);
+}
+
+.shake-effect {
+  display: inline-block;
+
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: var(--shake-base-transform);
+  }
+  10% {
+    transform: rotate(
+      calc(var(--shake-effect-rotation) * -1)
+    ) scale(
+      var(--shake-base-scale)
+    );
+  }
+  20% {
+    transform: rotate(
+      var(--shake-effect-rotation)
+    ) scale(
+      var(--shake-grow-scale)
+    )
+  }
+  30% {
+    transform: rotate(
+      calc(var(--shake-effect-rotation) * -1)
+    ) scale(
+      var(--shake-grow-scale)
+    );
+  }
+  40% {
+    transform: rotate(
+      var(--shake-effect-rotation)
+    ) scale(
+      var(--shake-grow-scale)
+    )
+  }
+  50% {
+    transform: var(--shake-base-transform);
+  }
+  100% {
+    transform: var(--shake-base-transform);
+  }
+}

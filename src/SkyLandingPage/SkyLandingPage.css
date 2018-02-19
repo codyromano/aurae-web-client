@@ -1,0 +1,52 @@
+html {
+  --sky-height: 300px;
+  --sky-delay: 3s;
+  --sky-storm-background-color: gray;
+}
+
+.sky-landing-page {
+  background-color: var(--sky-storm-background-color);
+  -webkit-animation-name: change-background-color;
+  animation-name: change-background-color;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  -webkit-animation-delay: var(--sky-delay);
+}
+
+@keyframes change-background-color {
+  0% {
+    background-color: var(--sky-storm-background-color);
+  }
+  100% {
+    background-color: var(--color-rich-blue);
+  }
+}
+
+@-webkit-keyframes change-background-color {
+  0% {
+    background-color: var(--sky-storm-background-color);
+  }
+  100% {
+    background-color: var(--color-rich-blue);
+  }
+}
+
+.sky-landing-page .button {
+  -webkit-animation-delay: 3s;
+}
+
+.sky-landing-page .heading {
+  animation-name: sky-heading-pop-out;
+  animation-duration: var(--sky-delay);
+  animation-fill-mode: forwards;
+}
+
+@keyframes sky-heading-pop-out {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
